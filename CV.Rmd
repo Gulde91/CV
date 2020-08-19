@@ -1,0 +1,125 @@
+---
+name: Alexander G. Guldbrand
+date: "`r format(Sys.time(), '%B, %Y')`"
+address: |
+         | Vigerslevvej 344, 1. tv., 2500 Valby, Danmark
+         | Nationalitet: Dansk, Fødselsdato: 17/03/1991
+profilepic: pic.png
+email: alexguldbrand@gmail.com
+phone: 25 17 03 76
+github: Gulde91
+linkedin: Alexander-Guldbrand
+headcolor: 414141
+output: vitae::awesomecv
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+\vspace{0.5cm}
+
+# Personlig profil
+*Skriv noget relevant tekst her..*
+
+# Relevant erhvervserfaring
+```{r}
+library(tibble)
+arb <- tribble(
+    ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
+    "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen", 
+    "Udvikling og produktionssætning af supervised og unsupervised machine learning-modeller gennem R",
+    "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Udtænkning af nye machine learning-løsninger i samarbejde med stakeholders",
+    "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Kvalitetssikring af løsninger gennem code review, unit tests, reproducerbar kode og standardisering af modeller",
+    "Arbejdsopgaver", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Analyse af borgere og virksomheders kontaktflow til SKAT",
+    "Arbejdsopgaver", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Analyse af borgeres adfærd på tastselv.dk",
+    "Arbejdsopgaver", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Segmentering af borgere og virksomheder mht. pengetransaktioner ud af landet"
+)
+
+arb %>%
+  detailed_entries(
+    with = rolle,
+    what = ansvar,
+    why = beskriv,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = sted
+  )
+```
+
+# Uddannelse
+```{r}
+udd <- tribble(
+    ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Multivariate statistiske modeller (12)",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Big Data Analytics (10)",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Data Science: Data Driven Decision Making (12)",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Praktisk tidsrækkeanalyse (12)",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Kandidatafhandling om kundesegmentering i Danske Bank (12)",
+    "Slutresultat: 9,0", 2011, 2014, "HA(.mat)", "Copenhagen Business School", NA,
+    NA, 2007, 2010, "Naturvidenskabelig/matematisk student", "Marie Kruse Skole", NA
+)
+
+udd %>%
+  detailed_entries(
+    with = rolle,
+    what = ansvar,
+    why = beskriv,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = sted
+  )
+```
+
+\newpage
+# Anden Erhvervserfaring
+```{r}
+and <- tribble(
+    ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
+    "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
+    "Kulturelle kompetencer",
+    "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
+    "Personlig service",
+    "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
+    "Tage hånd om uforudsete problemer",
+    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
+    "B1-træneruddannelse",
+    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
+    "Lede og tage ansvar for en gruppe",
+    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
+    "Definere spillestil og integrere det gennem træning og kamp",
+    "Udbytte:", 2005, 2008, "Elite ungdomsfodboldspiller", "FC Nordsjælland", 
+    "Forståelse for at arbejde i et professionelt sportsmiljø"
+)
+
+and %>%
+  detailed_entries(
+    with = rolle,
+    what = ansvar,
+    why = beskriv,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = sted
+  )
+```
+
+# Software
+**RStudio:** Øvet \newline
+**Git:** Let øvet \newline
+**Excel, Powerpoint, Word:** Let øvet \newline
+
+# Programmering
+**R:** Øvet \newline
+**SQL:** Let øvet \newline
+**VBA:** Let øvet \newline
+**SAS:** Let øvet \newline
+**Python:** Begynder \newline
+
