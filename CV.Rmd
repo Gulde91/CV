@@ -52,6 +52,49 @@ arb %>%
   )
 ```
 
+# Kurser 
+<!-- # futher education
+2020 Deep Learning Specialization, deeplearning.ai, Coursera
+“Specialization”.
+Five course specialization covering among other things hyperparameter tuning, regularization, optimization algorithms, CNNs and
+RNNs
+"En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden om deep learning. Kurset berører primært CNNs og RNNs.",
+-->
+```{r, eval=TRUE}
+ydl_udd <- tribble(
+    ~rolle, ~ansvar, ~endYear, ~beskriv,
+    "Deep Learning Specialization", "deeplearning.ai, Coursera", 2019,
+    "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden, om deep learning. Kurset berører primært CNNs og RNNs."
+    )
+
+ydl_udd %>%
+  detailed_entries(
+    with = rolle,
+    what = ansvar,
+    why = beskriv,
+    when = endYear#,
+    #where = sted
+  )
+
+# ydl_udd <- tribble(
+#     ~rolle, ~endYear, ~ansvar,
+#     "Deep Learning Specialization", 2019,
+#     "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden om deep learning. Kurset berører primært CNNs og RNNs."
+#     )
+
+
+# ydl_udd %>%
+# brief_entries(
+#     what = ansvar,
+#     when = rolle,
+#     with = endYear
+#   )
+
+```
+
+
+
+
 # Uddannelse
 ```{r}
 udd <- tribble(
