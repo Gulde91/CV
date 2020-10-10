@@ -68,6 +68,7 @@
 \RequirePackage{setspace}
 % Needed to manage fonts
 \RequirePackage[quiet]{fontspec}
+
 % To support LaTeX quoting style
 \defaultfontfeatures{Ligatures=TeX}
 % Needed to manage math fonts
@@ -750,3 +751,47 @@
     }
 }
 
+%-------------------------------------------------------------------------------
+%                Implementerer prik bar
+%-------------------------------------------------------------------------------
+\usepackage{tikz}
+
+\newcommand\resume[2]{%
+  \ifnum#1>#2
+    $#1 > #2$
+  \else
+    \ifnum#1<0
+      $#1 < 0$
+    \else
+      \ifnum#2<0
+        $#2 < 0$
+      \else
+        \tikz{%
+        \ifx#20
+        \else
+          \foreach \i in {1,...,#2} {
+            \filldraw[black!20] (\i ex,0) circle (0.4ex);
+          };
+        \fi
+        \ifx#10
+        \else
+          \foreach \i in {1,...,#1} {
+            \filldraw[black] (\i ex,0) circle (0.4ex);
+          };
+        \fi
+        }
+      \fi
+    \fi
+  \fi
+}
+
+%-------------------------------------------------------------------------------
+%                Specialized colorbox
+%-------------------------------------------------------------------------------
+\usepackage{tcolorbox}
+
+\newtcbox{\entoure}[1][black]{on line,
+arc=6pt, colback=black, colframe=black,
+before upper={\rule[-2pt]{0pt}{10pt}}, boxrule=1pt,
+boxsep=0pt, left=5pt, right=5pt, top=2pt, bottom=2pt}
+% https://tex.stackexchange.com/questions/458864/how-to-add-a-small-rounded-rectangle-around-a-word-inline

@@ -34,6 +34,10 @@ arb <- tribble(
     "Udtænkning af nye machine learning-løsninger i samarbejde med stakeholders",
     "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Kvalitetssikring af løsninger gennem code review, unit tests, reproducerbar kode og standardisering af modeller",
+    # "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    # "Samarbejde med de nordiske lande inden for avanceret analyse på momsområdet",
+    # "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    # "Rekruttering af nye medarbejdere",
     "Arbejdsopgaver", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Analyse af borgere og virksomheders kontaktflow til SKAT",
     "Arbejdsopgaver", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
@@ -51,48 +55,6 @@ arb %>%
     where = sted
   )
 ```
-
-# Kurser 
-<!-- # futher education
-2020 Deep Learning Specialization, deeplearning.ai, Coursera
-“Specialization”.
-Five course specialization covering among other things hyperparameter tuning, regularization, optimization algorithms, CNNs and
-RNNs
-"En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden om deep learning. Kurset berører primært CNNs og RNNs.",
--->
-```{r, eval=TRUE}
-ydl_udd <- tribble(
-    ~rolle, ~ansvar, ~endYear, ~beskriv,
-    "Deep Learning Specialization", "deeplearning.ai, Coursera", 2019,
-    "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden, om deep learning. Kurset berører primært CNNs og RNNs."
-    )
-
-ydl_udd %>%
-  detailed_entries(
-    with = rolle,
-    what = ansvar,
-    why = beskriv,
-    when = endYear#,
-    #where = sted
-  )
-
-# ydl_udd <- tribble(
-#     ~rolle, ~endYear, ~ansvar,
-#     "Deep Learning Specialization", 2019,
-#     "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden om deep learning. Kurset berører primært CNNs og RNNs."
-#     )
-
-
-# ydl_udd %>%
-# brief_entries(
-#     what = ansvar,
-#     when = rolle,
-#     with = endYear
-#   )
-
-```
-
-
 
 
 # Uddannelse
@@ -123,8 +85,38 @@ udd %>%
   )
 ```
 
-\newpage
+# Øvrige kurser 
+<!-- # futher education or courses, books and selfmade projects
+2020 Deep Learning Specialization, deeplearning.ai, Coursera
+“Specialization”.
+Five course specialization covering among other things hyperparameter tuning, regularization, optimization algorithms, CNNs and
+RNNs
+"En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden om deep learning. Kurset berører primært CNNs og RNNs.",
+-->
+```{r, eval=TRUE}
+ydl_udd <- tribble(
+    ~rolle, ~ansvar, ~endYear, ~beskriv,
+    "Deep Learning Specialization", "deeplearning.ai, Coursera", 2019,
+    "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden, om deep learning. Kurset berører primært CNNs og RNNs."
+    )
+  
+ydl_udd %>%
+  detailed_entries(
+    with = rolle,
+    what = ansvar,
+    why = beskriv,
+    when = endYear#,
+    #where = sted
+  )
+```
+
+# Relevante kompetencer
+
+
+
+<!-- \newpage -->
 # Anden Erhvervserfaring
+<!-- overvej hvor relevant nedenståender er, og om der er relevant at have udbytte med --> 
 ```{r}
 and <- tribble(
     ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
@@ -154,15 +146,89 @@ and %>%
   )
 ```
 
-# Software
-**RStudio:** Øvet \newline
-**Git:** Let øvet \newline
-**Excel, Powerpoint, Word:** Let øvet \newline
+# Skills
+\renewcommand{\arraystretch}{1.5} <!-- definere linjeafstand -->
+\begin{minipage}[t]{0.7\textwidth}
+  \vspace{-\baselineskip}
+  \entrypositionstyle{Tekniske færdigheder} \\
+  \begin{tabular}{llllll}
+    \textbf{R} & \resume{2}{6} &
+    \textbf{VBA} & \resume{2}{6} & 
+    \entoure{\textcolor{white}{Git}} & 
+    \entoure{\textcolor{white}{Confluence}} \\
+    \textbf{SQL} & \resume{2}{6} & 
+    \textbf{Python} & \resume{2}{6} &
+    \entoure{\textcolor{white}{Google Cloud}} \\
+    \textbf{SAS} & \resume{2}{6} & & &
+    \entoure{\textcolor{white}{Jira}} \\
+  \end{tabular}\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+  \vspace{-\baselineskip}
+  \entrypositionstyle{Sprog} \\
+  \begin{tabular}{ll}
+    \textbf{Dansk} - Modersmål \\
+    \textbf{Engelsk} - Flydende \\
+  \end{tabular}\end{minipage}
 
-# Programmering
-**R:** Øvet \newline
-**SQL:** Let øvet \newline
-**VBA:** Let øvet \newline
-**SAS:** Let øvet \newline
-**Python:** Begynder \newline
 
+<!--
+\begin{minipage}[c]{0.35\textwidth}
+%  \entrypositionstyle{Software} \\ % Programmering
+  \begin{tabular}{ll}
+    \entoure{\textcolor{white}{Git}} & 
+    \entoure{\textcolor{white}{Confluence}} \\
+    \entoure{\textcolor{white}{Google Cloud}} \\
+    \entoure{\textcolor{white}{Jira}} \\
+  \end{tabular}\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+
+\newpage
+
+
+```{r include=FALSE}
+myvar1 <- 5 * cos(pi / 3)
+myvar2 <- 10 * sin(pi / 6)
+```
+
+
+\begin{minipage}[c]{0.5in}
+  first\\ 
+  second\\ 
+  third
+\end{minipage}
+\begin{minipage}[b]{0.5in}
+  fjerde\\ 
+  femte\\ 
+  sjette
+\end{minipage}
+\begin{minipage}[t]{0.5in}
+  first\\ 
+  second\\ 
+  third
+\end{minipage}
+
+
+\begin{minipage}[t]{0.2\textwidth}
+\begin{tabular}{|c|c|c|}
+\hline
+ A & B & C \\
+\hline
+ 1 & 2 & 3  \\
+\hline 
+ 4 & 5 & 6 \\
+\hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+\begin{tabular}{c|c|c}
+ A & B & C \\
+\hline
+ 1 & 2 & 3  \\
+\hline 
+ 4 & 5 & 6 \\
+\hline 
+ 4 & 5 & 6 \\
+\end{tabular}
+\end{minipage}
+
+-->
