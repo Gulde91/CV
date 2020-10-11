@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
 
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 # Personlig profil
 *Skriv noget relevant tekst her..*
@@ -36,8 +36,8 @@ arb <- tribble(
     "Kvalitetssikring af løsninger gennem code review, unit tests, reproducerbar kode og standardisering af modeller",
     # "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     # "Samarbejde med de nordiske lande inden for avanceret analyse på momsområdet",
-    # "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-    # "Rekruttering af nye medarbejdere",
+     "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+     "Rekruttering af nye medarbejdere",
     "Arbejdsopgaver", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Analyse af borgere og virksomheders kontaktflow til SKAT",
     "Arbejdsopgaver", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
@@ -85,34 +85,77 @@ udd %>%
   )
 ```
 
-# Øvrige kurser 
+# Øvrige kurser og projekter
 <!-- # futher education or courses, books and selfmade projects
 2020 Deep Learning Specialization, deeplearning.ai, Coursera
 “Specialization”.
 Five course specialization covering among other things hyperparameter tuning, regularization, optimization algorithms, CNNs and
 RNNs
 "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden om deep learning. Kurset berører primært CNNs og RNNs.",
+
+writing efficient R code, Defensive R programming, Anomaly detection in R, Introduction to Git, Python for R users
 -->
 ```{r, eval=TRUE}
-ydl_udd <- tribble(
-    ~rolle, ~ansvar, ~endYear, ~beskriv,
-    "Deep Learning Specialization", "deeplearning.ai, Coursera", 2019,
-    "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden, om deep learning. Kurset berører primært CNNs og RNNs."
-    )
-  
-ydl_udd %>%
+# Coursera
+tribble(
+    ~rolle, ~ansvar, ~startYear, ~endYear, ~beskriv,
+    "Deep Learning Specialization", "deeplearning.ai, Coursera", 2018, 2019,
+    "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden, om deep learning. Kurset berører primært CNNs og RNNs.") %>% 
   detailed_entries(
     with = rolle,
     what = ansvar,
     why = beskriv,
-    when = endYear#,
-    #where = sted
-  )
+    when = glue::glue("{startYear} --> {endYear}",.na = ""))
+
+# DataCamp
+tribble(
+    ~rolle, ~startYear, ~endYear, ~beskriv,
+    "DataCamp kurser", 2018, "nu",
+    "Writing Efficient R Code, Defensive R Programming, Anomaly Detection in R, Introduction to Git, Python for R Users.") %>% 
+  detailed_entries(
+    with = rolle,
+    what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
+    when = glue::glue("{startYear} --> {endYear}",.na = ""), .protect = FALSE)
+
+# komma model
+tribble(
+    ~rolle, ~startYear, ~endYear, ~beskriv,
+    "Komma-model", 2019, 2020, "Udvikling af LSTM model til at prædiktere hvor et komma skal sættes i en dansk sætning.") %>% 
+    detailed_entries(
+    with = rolle,
+    what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
+    when = glue::glue("{startYear} --> {endYear}",.na = ""), .protect = FALSE)
 ```
 
+<!--
 # Relevante kompetencer
+-->
 
-
+# Skills
+\renewcommand{\arraystretch}{1.5} <!-- definere linjeafstand -->
+\begin{minipage}[t]{0.7\textwidth}
+  \vspace{-\baselineskip}
+  \entrypositionstyle{Tekniske færdigheder} \\
+  \begin{tabular}{llllll}
+    \textbf{R} & \resume{2}{6} &
+    \textbf{VBA} & \resume{2}{6} & 
+    \entoure{\textcolor{white}{Git}} & 
+    \entoure{\textcolor{white}{Confluence}} \\
+    \textbf{SQL} & \resume{2}{6} & 
+    \textbf{Python} & \resume{2}{6} &
+    \entoure{\textcolor{white}{Google Cloud}} &
+    \entoure{\textcolor{white}{Jenkins}} \\
+    \textbf{SAS} & \resume{2}{6} & & &
+    \entoure{\textcolor{white}{Jira}} \\
+  \end{tabular}\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+  \vspace{-\baselineskip}
+  \entrypositionstyle{Sprog} \\
+  \begin{tabular}{ll}
+    \textbf{Dansk} - Modersmål \\
+    \textbf{Engelsk} - Flydende \\
+  \end{tabular}\end{minipage}
+\renewcommand{\arraystretch}{1} <!-- definere linjeafstand -->
 
 <!-- \newpage -->
 # Anden Erhvervserfaring
@@ -146,89 +189,3 @@ and %>%
   )
 ```
 
-# Skills
-\renewcommand{\arraystretch}{1.5} <!-- definere linjeafstand -->
-\begin{minipage}[t]{0.7\textwidth}
-  \vspace{-\baselineskip}
-  \entrypositionstyle{Tekniske færdigheder} \\
-  \begin{tabular}{llllll}
-    \textbf{R} & \resume{2}{6} &
-    \textbf{VBA} & \resume{2}{6} & 
-    \entoure{\textcolor{white}{Git}} & 
-    \entoure{\textcolor{white}{Confluence}} \\
-    \textbf{SQL} & \resume{2}{6} & 
-    \textbf{Python} & \resume{2}{6} &
-    \entoure{\textcolor{white}{Google Cloud}} \\
-    \textbf{SAS} & \resume{2}{6} & & &
-    \entoure{\textcolor{white}{Jira}} \\
-  \end{tabular}\end{minipage}
-\begin{minipage}[t]{0.3\textwidth}
-  \vspace{-\baselineskip}
-  \entrypositionstyle{Sprog} \\
-  \begin{tabular}{ll}
-    \textbf{Dansk} - Modersmål \\
-    \textbf{Engelsk} - Flydende \\
-  \end{tabular}\end{minipage}
-
-
-<!--
-\begin{minipage}[c]{0.35\textwidth}
-%  \entrypositionstyle{Software} \\ % Programmering
-  \begin{tabular}{ll}
-    \entoure{\textcolor{white}{Git}} & 
-    \entoure{\textcolor{white}{Confluence}} \\
-    \entoure{\textcolor{white}{Google Cloud}} \\
-    \entoure{\textcolor{white}{Jira}} \\
-  \end{tabular}\end{minipage}
-\begin{minipage}[c]{0.2\textwidth}
-
-\newpage
-
-
-```{r include=FALSE}
-myvar1 <- 5 * cos(pi / 3)
-myvar2 <- 10 * sin(pi / 6)
-```
-
-
-\begin{minipage}[c]{0.5in}
-  first\\ 
-  second\\ 
-  third
-\end{minipage}
-\begin{minipage}[b]{0.5in}
-  fjerde\\ 
-  femte\\ 
-  sjette
-\end{minipage}
-\begin{minipage}[t]{0.5in}
-  first\\ 
-  second\\ 
-  third
-\end{minipage}
-
-
-\begin{minipage}[t]{0.2\textwidth}
-\begin{tabular}{|c|c|c|}
-\hline
- A & B & C \\
-\hline
- 1 & 2 & 3  \\
-\hline 
- 4 & 5 & 6 \\
-\hline
-\end{tabular}
-\end{minipage}
-\begin{minipage}[t]{0.2\textwidth}
-\begin{tabular}{c|c|c}
- A & B & C \\
-\hline
- 1 & 2 & 3  \\
-\hline 
- 4 & 5 & 6 \\
-\hline 
- 4 & 5 & 6 \\
-\end{tabular}
-\end{minipage}
-
--->
