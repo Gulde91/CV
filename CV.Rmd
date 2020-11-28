@@ -111,7 +111,7 @@ tribble(
 tribble(
     ~rolle, ~startYear, ~endYear, ~beskriv,
     "DataCamp kurser", 2018, "nu",
-    "Writing Efficient R Code, Defensive R Programming, Anomaly Detection in R, Introduction to Git, Python for R Users.") %>% 
+    "Writing Efficient R Code, Defensive R Programming, Anomaly Detection in R, Introduction to Git, Introduction to Python, Python for R Users.") %>% 
   detailed_entries(
     with = rolle,
     what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
@@ -140,7 +140,7 @@ tribble(
     \textbf{R} & \resume{2}{6} &
     \textbf{VBA} & \resume{2}{6} & 
     \entoure{\textcolor{white}{Git}} & 
-    \entoure{\textcolor{white}{Confluence}} \\
+    \entoure{\textcolor{white}{Regex}} \\
     \textbf{SQL} & \resume{2}{6} & 
     \textbf{Python} & \resume{2}{6} &
     \entoure{\textcolor{white}{Google Cloud}} &
