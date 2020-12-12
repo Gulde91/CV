@@ -89,11 +89,10 @@ udd %>%
 <!-- # futher education or courses, books and selfmade projects
 2020 Deep Learning Specialization, deeplearning.ai, Coursera
 “Specialization”.
-Five course specialization covering among other things hyperparameter tuning, regularization, optimization algorithms, CNNs and
-RNNs
+Five course specialization covering among other things hyperparameter tuning, regularization, optimization algorithms, CNNs and RNNs
+
 "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden om deep learning. Kurset berører primært CNNs og RNNs.",
 
-writing efficient R code, Defensive R programming, Anomaly detection in R, Introduction to Git, Python for R users
 -->
 ```{r, eval=TRUE}
 # Coursera
@@ -111,7 +110,7 @@ tribble(
 tribble(
     ~rolle, ~startYear, ~endYear, ~beskriv,
     "DataCamp kurser", 2018, "nu",
-    "Writing Efficient R Code, Defensive R Programming, Anomaly Detection in R, Introduction to Git, Introduction to Python, Python for R Users.") %>% 
+    "Writing Efficient R Code, Defensive R Programming, Anomaly Detection in R, Introduction to Git, Introduction to Python, Python for R Users, Foundations of Functional Programming with purrr.") %>% 
   detailed_entries(
     with = rolle,
     what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
