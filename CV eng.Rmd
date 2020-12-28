@@ -1,0 +1,190 @@
+---
+name: Alexander G. Guldbrand
+date: "`r format(Sys.time(), '%B, %Y')`"
+address: |
+         | Vigerslevvej 344, 1. tv., 2500 Valby, Denmark
+         | Nationalitet: Danish, Date of birth: 17/03/1991
+profilepic: pic.png
+email: alexguldbrand@gmail.com
+phone: 25 17 03 76
+github: Gulde91
+linkedin: Alexander-Guldbrand
+headcolor: 414141
+output: vitae::awesomecv
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+\vspace{0.2cm}
+
+# About Me
+*Skriv noget relevant tekst her..*
+
+# Professionel Expericence
+```{r}
+library(tibble)
+arb <- tribble(
+    ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
+    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen", 
+    "Development and deployment of supervised and unsupervised models through R",
+    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Udtænkning af nye machine learning-løsninger i samarbejde med stakeholders",
+    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Kvalitetssikring af løsninger gennem code review, unit tests, reproducerbar kode og standardisering af modeller",
+     "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+     "Samarbejde med de nordiske lande inden for avanceret analyse på momsområdet",
+     "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+     "Rekruttering af nye medarbejdere",
+    "Tasks", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Analyse af borgere og virksomheders kontaktflow til SKAT",
+    "Tasks", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Analyse af borgeres adfærd på tastselv.dk",
+    "Tasks", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Segmentering af borgere og virksomheder mht. pengetransaktioner ud af landet"
+)
+
+arb %>%
+  detailed_entries(
+    with = rolle,
+    what = ansvar,
+    why = beskriv,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = sted
+  )
+```
+
+
+# Uddannelse
+```{r}
+udd <- tribble(
+    ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Multivariate statistiske modeller (12)",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Big Data Analytics (10)",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Data Science: Data Driven Decision Making (12)",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Praktisk tidsrækkeanalyse (12)",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Kandidatafhandling om kundesegmentering i Danske Bank (12)",
+    "Slutresultat: 9,0", 2011, 2014, "HA(.mat)", "Copenhagen Business School", NA,
+    NA, 2007, 2010, "Naturvidenskabelig/matematisk student", "Marie Kruse Skole", NA
+)
+
+udd %>%
+  detailed_entries(
+    with = rolle,
+    what = ansvar,
+    why = beskriv,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = sted
+  )
+```
+
+# Øvrige kurser og projekter
+<!-- # futher education or courses, books and selfmade projects
+2020 Deep Learning Specialization, deeplearning.ai, Coursera
+“Specialization”.
+Five course specialization covering among other things hyperparameter tuning, regularization, optimization algorithms, CNNs and RNNs
+
+"En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden om deep learning. Kurset berører primært CNNs og RNNs.",
+
+-->
+```{r, eval=TRUE}
+# Coursera
+tribble(
+    ~rolle, ~ansvar, ~startYear, ~endYear, ~beskriv,
+    "Deep Learning Specialization", "deeplearning.ai, Coursera", 2018, 2019,
+    "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden, om deep learning. Kurset berører primært CNNs og RNNs.") %>% 
+  detailed_entries(
+    with = rolle,
+    what = ansvar,
+    why = beskriv,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""))
+
+# DataCamp
+tribble(
+    ~rolle, ~startYear, ~endYear, ~beskriv,
+    "DataCamp kurser", 2018, "nu",
+    "Writing Efficient R Code, Defensive R Programming, Introduction to Natural Language Processing in R, Anomaly Detection in R, Introduction to Git, Introduction to Python, Python for R Users, Foundations of Functional Programming with purrr, Intermediate Functional Programming with purrr.") %>% 
+  detailed_entries(
+    with = rolle,
+    what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
+    when = glue::glue("{startYear} --> {endYear}",.na = ""), .protect = FALSE)
+
+# komma model
+tribble(
+    ~rolle, ~startYear, ~endYear, ~beskriv,
+    "Komma-model", 2019, 2020, "Udvikling af LSTM model til at prædiktere hvor et komma skal sættes i en dansk sætning.") %>% 
+    detailed_entries(
+    with = rolle,
+    what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
+    when = glue::glue("{startYear} --> {endYear}",.na = ""), .protect = FALSE)
+```
+
+<!--
+# Relevante kompetencer
+-->
+
+# Skills
+\renewcommand{\arraystretch}{1.5} <!-- definere linjeafstand -->
+\begin{minipage}[t]{0.7\textwidth}
+  \vspace{-\baselineskip}
+  \entrypositionstyle{Tekniske færdigheder} \\
+  \begin{tabular}{llllll}
+    \textbf{R} & \resume{2}{6} &
+    \textbf{VBA} & \resume{2}{6} & 
+    \entoure{\textcolor{white}{Git}} & 
+    \entoure{\textcolor{white}{Regex}} \\
+    \textbf{SQL} & \resume{2}{6} & 
+    \textbf{Python} & \resume{2}{6} &
+    \entoure{\textcolor{white}{Google Cloud}} &
+    \entoure{\textcolor{white}{Jenkins}} \\
+    \textbf{SAS} & \resume{2}{6} & & &
+    \entoure{\textcolor{white}{Jira}} \\
+  \end{tabular}\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+  \vspace{-\baselineskip}
+  \entrypositionstyle{Sprog} \\
+  \begin{tabular}{ll}
+    \textbf{Dansk} - Modersmål \\
+    \textbf{Engelsk} - Flydende \\
+  \end{tabular}\end{minipage}
+\renewcommand{\arraystretch}{1} <!-- definere linjeafstand -->
+
+<!-- \newpage -->
+# Anden Erhvervserfaring
+<!-- overvej hvor relevant nedenståender er, og om der er relevant at have udbytte med --> 
+```{r}
+and <- tribble(
+    ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
+    "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
+    "Kulturelle kompetencer",
+    "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
+    "Personlig service",
+    "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
+    "Tage hånd om uforudsete problemer",
+    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
+    "B1-træneruddannelse",
+    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
+    "Lede og tage ansvar for en gruppe",
+    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
+    "Definere spillestil og integrere det gennem træning og kamp",
+    "Udbytte:", 2005, 2008, "Elite ungdomsfodboldspiller", "FC Nordsjælland", 
+    "Forståelse for at arbejde i et professionelt sportsmiljø"
+)
+
+and %>%
+  detailed_entries(
+    with = rolle,
+    what = ansvar,
+    why = beskriv,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = sted
+  )
+```
+
