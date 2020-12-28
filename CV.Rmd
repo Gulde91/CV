@@ -110,7 +110,7 @@ tribble(
 tribble(
     ~rolle, ~startYear, ~endYear, ~beskriv,
     "DataCamp kurser", 2018, "nu",
-    "Writing Efficient R Code, Defensive R Programming, Anomaly Detection in R, Introduction to Git, Introduction to Python, Python for R Users, Foundations of Functional Programming with purrr, Intermediate Functional Programming with purrr.") %>% 
+    "Writing Efficient R Code, Defensive R Programming, Introduction to Natural Language Processing in R, Anomaly Detection in R, Introduction to Git, Introduction to Python, Python for R Users, Foundations of Functional Programming with purrr, Intermediate Functional Programming with purrr.") %>% 
   detailed_entries(
     with = rolle,
     what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
