@@ -3,7 +3,7 @@ name: Alexander G. Guldbrand
 date: "`r format(Sys.time(), '%B, %Y')`"
 address: |
          | Vigerslevvej 344, 1. tv., 2500 Valby, Denmark
-         | Nationalitet: Danish, Date of birth: 17/03/1991
+         | Nationality: Danish, Date of birth: 17/03/1991
 profilepic: pic.png
 email: alexguldbrand@gmail.com
 phone: 25 17 03 76
@@ -21,9 +21,9 @@ library(vitae)
 \vspace{0.2cm}
 
 # About Me
-*Skriv noget relevant tekst her..*
+*write something relevante..*
 
-# Professionel Expericence
+# Professional Experience
 ```{r}
 library(tibble)
 arb <- tribble(
@@ -31,19 +31,19 @@ arb <- tribble(
     "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen", 
     "Development and deployment of supervised and unsupervised models through R",
     "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-    "Udtænkning af nye machine learning-løsninger i samarbejde med stakeholders",
+    "Team lead Data Scientist on machine learning models developed in the VAT area",
     "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-    "Kvalitetssikring af løsninger gennem code review, unit tests, reproducerbar kode og standardisering af modeller",
-     "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-     "Samarbejde med de nordiske lande inden for avanceret analyse på momsområdet",
-     "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-     "Rekruttering af nye medarbejdere",
+    "Ensure code quality through code review, unit tests and reproducible code ",
+    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Cooperating with the Scandinavian countries in advanced analytics on the VAT area",
+    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Recruiting new employees",
     "Tasks", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-    "Analyse af borgere og virksomheders kontaktflow til SKAT",
+    "Analyzing citizens and companies contack flow with SKAT",
     "Tasks", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-    "Analyse af borgeres adfærd på tastselv.dk",
+    "Analyzing citizens behavior on tastselv.dk",
     "Tasks", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-    "Segmentering af borgere og virksomheder mht. pengetransaktioner ud af landet"
+    "Clustering citizens and companies regarding to money transfer to foreign countries"
 )
 
 arb %>%
@@ -57,22 +57,22 @@ arb %>%
 ```
 
 
-# Uddannelse
+# Education
 ```{r}
 udd <- tribble(
     ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
-    "Multivariate statistiske modeller (12)",
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Final result: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
+    "Multivariate Statistical Models (12)",
+    "Final result: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
     "Big Data Analytics (10)",
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Final result: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
     "Data Science: Data Driven Decision Making (12)",
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
-    "Praktisk tidsrækkeanalyse (12)",
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
-    "Kandidatafhandling om kundesegmentering i Danske Bank (12)",
-    "Slutresultat: 9,0", 2011, 2014, "HA(.mat)", "Copenhagen Business School", NA,
-    NA, 2007, 2010, "Naturvidenskabelig/matematisk student", "Marie Kruse Skole", NA
+    "Final result: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
+    "Practical Time Series Analysis (12)",
+    "Final result: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
+    "Master's thesis - Customer segmentation in Danske Bank (12)",
+    "Final result: 9,0", 2011, 2014, "HA(mat.)", "Copenhagen Business School", NA,
+    NA, 2007, 2010, "Natural Science/Mathematical student", "Marie Kruse Skole", NA
 )
 
 udd %>%
@@ -85,7 +85,7 @@ udd %>%
   )
 ```
 
-# Øvrige kurser og projekter
+# Courses and Projects
 <!-- # futher education or courses, books and selfmade projects
 2020 Deep Learning Specialization, deeplearning.ai, Coursera
 “Specialization”.
@@ -99,7 +99,7 @@ Five course specialization covering among other things hyperparameter tuning, re
 tribble(
     ~rolle, ~ansvar, ~startYear, ~endYear, ~beskriv,
     "Deep Learning Specialization", "deeplearning.ai, Coursera", 2018, 2019,
-    "En serie på 5 kurser som både dækker grundlæggende, men også mere specialiseret viden, om deep learning. Kurset berører primært CNNs og RNNs.") %>% 
+    "A series of 5 courses with covers basic but also more specialized knowledge about deep learning. This course is focusing on CNNs and RNNs.") %>% 
   detailed_entries(
     with = rolle,
     what = ansvar,
@@ -109,7 +109,7 @@ tribble(
 # DataCamp
 tribble(
     ~rolle, ~startYear, ~endYear, ~beskriv,
-    "DataCamp kurser", 2018, "nu",
+    "DataCamp courses", 2018, "now",
     "Writing Efficient R Code, Defensive R Programming, Introduction to Natural Language Processing in R, Anomaly Detection in R, Introduction to Git, Introduction to Python, Python for R Users, Foundations of Functional Programming with purrr, Intermediate Functional Programming with purrr, Web scraping in R.") %>% 
   detailed_entries(
     with = rolle,
@@ -119,7 +119,7 @@ tribble(
 # komma model
 tribble(
     ~rolle, ~startYear, ~endYear, ~beskriv,
-    "Komma-model", 2019, 2020, "Udvikling af LSTM model til at prædiktere hvor et komma skal sættes i en dansk sætning.") %>% 
+    "Comma-model", 2019, 2020, "Development of a LSTM model to predict where a comma should be placed in a danish sentence.") %>% 
     detailed_entries(
     with = rolle,
     what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
@@ -134,7 +134,7 @@ tribble(
 \renewcommand{\arraystretch}{1.5} <!-- definere linjeafstand -->
 \begin{minipage}[t]{0.7\textwidth}
   \vspace{-\baselineskip}
-  \entrypositionstyle{Tekniske færdigheder} \\
+  \entrypositionstyle{Technical skills} \\
   \begin{tabular}{llllll}
     \textbf{R} & \resume{2}{6} &
     \textbf{VBA} & \resume{2}{6} & 
@@ -149,34 +149,34 @@ tribble(
   \end{tabular}\end{minipage}
 \begin{minipage}[t]{0.3\textwidth}
   \vspace{-\baselineskip}
-  \entrypositionstyle{Sprog} \\
+  \entrypositionstyle{Languages} \\
   \begin{tabular}{ll}
-    \textbf{Dansk} - Modersmål \\
-    \textbf{Engelsk} - Flydende \\
+    \textbf{Danish} - Native \\
+    \textbf{English} - Proficient \\
   \end{tabular}\end{minipage}
 \renewcommand{\arraystretch}{1} <!-- definere linjeafstand -->
 
 <!-- \newpage -->
-# Anden Erhvervserfaring
-<!-- overvej hvor relevant nedenståender er, og om der er relevant at have udbytte med --> 
+# Additional Experience
+<!-- overvej hvor relevant nedenstående er, og om det er relevant at have udbytte med --> 
 ```{r}
 and <- tribble(
     ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
-    "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
-    "Kulturelle kompetencer",
-    "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
-    "Personlig service",
-    "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
-    "Tage hånd om uforudsete problemer",
-    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
-    "B1-træneruddannelse",
-    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
-    "Lede og tage ansvar for en gruppe",
-    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
-    "Definere spillestil og integrere det gennem træning og kamp",
-    "Udbytte:", 2005, 2008, "Elite ungdomsfodboldspiller", "FC Nordsjælland", 
-    "Forståelse for at arbejde i et professionelt sportsmiljø"
-)
+    "Outcome:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
+    "Cultural understanding",
+    "Outcome:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
+    "Personal service",
+    "Outcome:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
+    "Take care of unforeseen incidents",
+    "Outcome:", 2009, 2011, "Football coach", "Farum Boldklub", 
+    "To take responsibility for a group",
+    "Outcome:", 2009, 2011, "Football coach", "Farum Boldklub", 
+    "Defining ways to play and integrating it through training and match",
+    "Outcome:", 2009, 2011, "Football coach", "Farum Boldklub", 
+    "B1 Football coach education",
+    "Outcome:", 2005, 2008, "Youth football player", "FC Nordsjælland", 
+    "Understading for working in a professionel enviroment"
+    )
 
 and %>%
   detailed_entries(
