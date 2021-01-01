@@ -31,7 +31,7 @@ arb <- tribble(
     "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen", 
     "Udvikling og produktionssætning af supervised og unsupervised machine learning-modeller gennem R",
     "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-    "Udtænkning af nye machine learning-løsninger i samarbejde med stakeholders",
+    "Team lead Data Scientist på momsområdet",
     "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Kvalitetssikring af løsninger gennem code review, unit tests, reproducerbar kode og standardisering af modeller",
      "Arbejdsopgaver", 2016, "nu", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
@@ -85,7 +85,7 @@ udd %>%
   )
 ```
 
-# Øvrige kurser og projekter
+# Kurser og projekter
 <!-- # futher education or courses, books and selfmade projects
 2020 Deep Learning Specialization, deeplearning.ai, Coursera
 “Specialization”.
@@ -169,11 +169,11 @@ and <- tribble(
     "Udbytte:", 2010, 2014, "Receptionist", "Hotel Jørgensen", 
     "Tage hånd om uforudsete problemer",
     "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
-    "B1-træneruddannelse",
-    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
     "Lede og tage ansvar for en gruppe",
     "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
     "Definere spillestil og integrere det gennem træning og kamp",
+    "Udbytte:", 2009, 2011, "Fodboldtræner", "Farum Boldklub", 
+    "B1-træneruddannelse",
     "Udbytte:", 2005, 2008, "Elite ungdomsfodboldspiller", "FC Nordsjælland", 
     "Forståelse for at arbejde i et professionelt sportsmiljø"
 )
