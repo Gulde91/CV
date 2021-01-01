@@ -61,15 +61,15 @@ arb %>%
 ```{r}
 udd <- tribble(
     ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
     "Multivariate statistiske modeller (12)",
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
     "Big Data Analytics (10)",
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
     "Data Science: Data Driven Decision Making (12)",
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
     "Praktisk tidsrækkeanalyse (12)",
-    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.mat", "Copenhagen Business School",
+    "Slutresultat: 11,6", 2014, 2016, "Cand.merc.(mat.)", "Copenhagen Business School",
     "Kandidatafhandling om kundesegmentering i Danske Bank (12)",
     "Slutresultat: 9,0", 2011, 2014, "HA(mat.)", "Copenhagen Business School", NA,
     NA, 2007, 2010, "Naturvidenskabelig/matematisk student", "Marie Kruse Skole", NA
