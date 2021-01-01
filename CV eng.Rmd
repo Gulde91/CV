@@ -22,9 +22,11 @@ library(tibble)
 \vspace{0.2cm}
 
 # About Me
-*write something relevante..*
+*write something relevante..*  
 
 # Professional Experience
+<!--\faIcon{briefcase} Professional Experience -->
+
 ```{r}
 arb <- tribble(
     ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
@@ -41,7 +43,7 @@ arb <- tribble(
     "Tasks", "2014", "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Analyzing citizens and companies contack flow with SKAT",
     "Tasks", "2014", "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
-    "Analyzing citizens behavior on tastselv.dk",
+    "Analyzing citizens behavior on tastselv.dk", 
     "Tasks", "2014", "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Clustering citizens and companies regarding to money transfer to foreign countries"
 )

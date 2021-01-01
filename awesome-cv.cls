@@ -68,6 +68,8 @@
 \RequirePackage{setspace}
 % Needed to manage fonts
 \RequirePackage[quiet]{fontspec}
+% Needed for icons
+\RequirePackage{fontawesome5}
 
 % To support LaTeX quoting style
 \defaultfontfeatures{Ligatures=TeX}
