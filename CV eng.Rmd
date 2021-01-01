@@ -16,6 +16,7 @@ output: vitae::awesomecv
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
+library(tibble)
 ```
 
 \vspace{0.2cm}
@@ -25,24 +26,23 @@ library(vitae)
 
 # Professional Experience
 ```{r}
-library(tibble)
 arb <- tribble(
     ~ansvar, ~startYear, ~endYear, ~rolle, ~sted, ~beskriv,
-    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen", 
+    "Tasks", "2016", "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen", 
     "Development and deployment of supervised and unsupervised models through R",
-    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Tasks", "2016", "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Team lead Data Scientist on machine learning models developed in the VAT area",
-    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Tasks", "2016", "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Ensure code quality through code review, unit tests and reproducible code ",
-    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Tasks", "2016", "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Cooperating with the Scandinavian countries in advanced analytics on the VAT area",
-    "Tasks", 2016, "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Tasks", "2016", "now", "Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Recruiting new employees",
-    "Tasks", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Tasks", "2014", "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Analyzing citizens and companies contack flow with SKAT",
-    "Tasks", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Tasks", "2014", "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Analyzing citizens behavior on tastselv.dk",
-    "Tasks", 2014, "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
+    "Tasks", "2014", "2016", "Junior Data Scientist", "Udviklings- og Forenklingsstyrelsen",
     "Clustering citizens and companies regarding to money transfer to foreign countries"
 )
 
@@ -51,7 +51,7 @@ arb %>%
     with = rolle,
     what = ansvar,
     why = beskriv,
-    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    when = glue::glue("{startYear} - {endYear}", .na = ""),
     where = sted
   )
 ```
@@ -80,7 +80,7 @@ udd %>%
     with = rolle,
     what = ansvar,
     why = beskriv,
-    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    when = glue::glue("{startYear} - {endYear}",.na = ""),
     where = sted
   )
 ```
@@ -104,7 +104,7 @@ tribble(
     with = rolle,
     what = ansvar,
     why = beskriv,
-    when = glue::glue("{startYear} --> {endYear}",.na = ""))
+    when = glue::glue("{startYear} - {endYear}",.na = ""))
 
 # DataCamp
 tribble(
@@ -114,7 +114,7 @@ tribble(
   detailed_entries(
     with = rolle,
     what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
-    when = glue::glue("{startYear} --> {endYear}",.na = ""), .protect = FALSE)
+    when = glue::glue("{startYear} - {endYear}",.na = ""), .protect = FALSE)
 
 # komma model
 tribble(
@@ -123,7 +123,7 @@ tribble(
     detailed_entries(
     with = rolle,
     what =  glue::glue("\\descriptionstyle{<beskriv>}", .open = "<", .close = ">"),
-    when = glue::glue("{startYear} --> {endYear}",.na = ""), .protect = FALSE)
+    when = glue::glue("{startYear} - {endYear}",.na = ""), .protect = FALSE)
 ```
 
 <!--
@@ -183,7 +183,7 @@ and %>%
     with = rolle,
     what = ansvar,
     why = beskriv,
-    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    when = glue::glue("{startYear} - {endYear}",.na = ""),
     where = sted
   )
 ```
